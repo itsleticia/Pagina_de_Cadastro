@@ -1,0 +1,163 @@
+:root{
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    background-image: url(/intro-component-with-signup-form-master/images/bg-intro-desktop.png);
+    background-color: var(--Red);
+    color: white;
+}
+.container{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.col-1, .col-2{
+    width: 35vw;
+    height: 50vh;
+}
+.col-1{
+    margin: 6em 3em 0 0;
+    
+}
+.description{
+    font-size:13px;
+    margin-top: 5px;
+}
+.tryal-msg ,form{
+    border-radius: 5px;  
+    box-shadow: 0px 5px 2px var(--Dark-Blue)
+}
+.tryal-msg{
+    background: var(--Blue);
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 0.8em 1em;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+
+}
+span{
+    font-weight: 600;
+    margin-right: 5px;
+}
+form{
+    background: white;
+    padding: 2em;
+    
+}
+
+input{
+    width: 100%;
+    height: 40px;
+    padding: 1em;
+    font-size: 13px;
+    color: var(--Dark-Blue);
+    font-weight: 600;
+}
+button{
+    background: var(--Green);
+    color: white;
+    border: none;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;  
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right, var(--Green), var(--Grayish-Blue))
+}
+.terms{
+    color: var(--Grayish-Blue);
+    font-size: 9px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: var(--Red);
+    font-weight: 600;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.form-control{
+    position: relative;
+}
+/* Esconder o ícone de erro por padrão */
+.img-error {
+      position: absolute;
+      right: 5px;
+      top: 10px;
+      color: red;
+      display: none;
+}
+/* Exibir o ícone de erro somente quando houver erro */
+.form-control.error input{
+    border: 1px solid var(--Red);
+}
+.form-control.error .errorMsg{    
+    color: var(--Red);
+    font-size: 12px;
+    text-align: right;
+    display: block;
+        
+}
+.input-valid {
+    margin-bottom: 15px;
+}
+
+/* Responsividade*/
+@media (max-width:450px){
+    .container{
+        display: block;
+        width: 80vw;
+        height:80vh;
+    }
+    .col-1, .col-2{
+        width: 100%;
+        height: fit-content;
+        
+    }
+    .col-1{
+        margin: 1em 0; 
+        text-align: center; 
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    .col-2{
+        margin-bottom: 2em;
+
+    }
+    .tryal-msg{
+        padding: 2em 2em;
+        
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+    .col-1, .col-2{
+        width: 40vw;
+        height: 50vh;
+    }
+}
